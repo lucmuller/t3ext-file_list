@@ -14,7 +14,7 @@
             </f:then>
             <f:else>
                 <li>
-                    <f:link.action action="list" arguments="{path: item.folder.identifier}">
+                    <f:link.action action="list" arguments="{path: item.folder.cleanIdentifier}">
                         <f:if condition="{item.isRoot}">
                             <f:then><f:translate key="breadcrumb.home"/></f:then>
                             <f:else>{item.folder.name}</f:else>

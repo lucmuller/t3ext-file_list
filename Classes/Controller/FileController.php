@@ -317,7 +317,7 @@ class FileController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
         // In a subfolder, so retrieve parent folder
         if (!empty($path)) {
-            $parentFolder = $folder->getParentFolder();
+            $parentFolder = \Causal\FileList\Utility\Helper::cast($folder->getParentFolder(), \Causal\FileList\Domain\Model\Folder::class);
         }
 
         if ((bool)$this->settings['includeSubfolders']) {

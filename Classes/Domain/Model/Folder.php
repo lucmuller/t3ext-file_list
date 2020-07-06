@@ -53,6 +53,14 @@ class Folder extends \TYPO3\CMS\Core\Resource\Folder
     }
 
     /**
+     * @return string
+     */
+    public function getCleanIdentifier(): string
+    {
+        return rtrim($this->identifier, '/');
+    }
+
+    /**
      * @param int $newTimestamp
      * @param int $maxDepth
      * @param int $depth (internal)
